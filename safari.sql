@@ -5,7 +5,13 @@ DROP TABLE assignment;
 DROP TABLE enclosures; 
 
 
-
+CREATE TABLE animals (
+id SERIAL PRIMARY KEY, 
+name VARCHAR(255),
+type VARCHAR(255), 
+age INT, 
+enclosure_id INT
+); 
 
 CREATE TABLE enclosures (
 id SERIAL PRIMARY KEY, 
@@ -14,13 +20,6 @@ capacity INT,
 closedForMaintenance BOOLEAN
 );
 
-CREATE TABLE animals (
-id SERIAL PRIMARY KEY, 
-name VARCHAR(255),
-type VARCHAR(255), 
-age INT, 
-enclosure_id INT
-); 
 
 CREATE TABLE assignment(
 id SERIAL PRIMARY KEY, 
@@ -37,7 +36,4 @@ employeeNumber INT
 );
 
 
-
-
-
-INSERT INTO animals(name, type, age, enclosure_id) VALUES ("Mildred", "Capybara", 13); 
+INSERT INTO animals(name, type, age) VALUES ('Mildred', 'Capybara', 13); 
